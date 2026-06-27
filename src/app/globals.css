@@ -1,1 +1,75 @@
+/* ─────────────────────────────────────────────────────────────────
+   src/app/globals.css
+
+   Tailwind v4 uses @import instead of the old three directives.
+   Custom colours and theme tokens are defined with @theme —
+   no tailwind.config.js needed.
+
+   Custom colour usage:
+     bg-brand         text-brand         border-brand
+     bg-brand-light   text-brand-light   border-brand-light
+     bg-brand-dark    text-brand-dark
+     bg-navy          text-navy
+───────────────────────────────────────────────────────────────── */
+
 @import "tailwindcss";
+
+/* ── Brand colour tokens ── */
+@theme {
+  --color-brand:       #1D9E75;   /* primary teal — buttons, accents */
+  --color-brand-light: #E1F5EE;   /* teal tint    — tags, backgrounds */
+  --color-brand-dark:  #0F6E56;   /* teal shade   — text on light bg  */
+  --color-navy:        #0D1B2A;   /* dark navy     — footer, stats, CTA */
+
+  /* Font */
+  --font-family-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* ── Base overrides ── */
+@layer base {
+  html {
+    scroll-behavior: smooth;   /* smooth scroll for anchor nav links */
+  }
+
+  body {
+    @apply text-gray-900 antialiased;
+  }
+
+  a {
+    text-decoration: none;     /* prevent underlines on Link components */
+  }
+}
+ 
+
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+@keyframes floatStep {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.0);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.08);
+  }
+}
