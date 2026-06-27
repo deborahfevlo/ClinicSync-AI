@@ -1,5 +1,16 @@
+/* ─────────────────────────────────────────────────────────────────
+   src/app/globals.css
 
- 
+   Tailwind v4 uses @import instead of the old three directives.
+   Custom colours and theme tokens are defined with @theme —
+   no tailwind.config.js needed.
+
+   Custom colour usage:
+     bg-brand         text-brand         border-brand
+     bg-brand-light   text-brand-light   border-brand-light
+     bg-brand-dark    text-brand-dark
+     bg-navy          text-navy
+───────────────────────────────────────────────────────────────── */
 
 @import "tailwindcss";
 
@@ -28,6 +39,9 @@
     text-decoration: none;     /* prevent underlines on Link components */
   }
 }
+ 
+
+
 
 @keyframes marquee {
   from {
